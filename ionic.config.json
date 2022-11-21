@@ -1,0 +1,7 @@
+{
+  "name": "turnosApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,19 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>DashboardHome</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content> -->
+
+<div *ngIf="user.rol === 1">
+	<h1>Hello Admin</h1>
+  <app-admin-home-dashboard></app-admin-home-dashboard>
+</div>
+
+<div *ngIf="user.rol === 2">
+	<h1>Hello Client</h1>
+  <app-client-home-dashboard></app-client-home-dashboard>
+</div>

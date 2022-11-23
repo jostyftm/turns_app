@@ -1,0 +1,22 @@
+
+ion-card {
+    --ion-background-color: transparent;
+    box-shadow: none;
+}
+
+ion-content{
+    --ion-background-color: #f3f3f3;
+}
+
+.btn-auth{
+    margin-top: 35px;
+    text-align: center;
+}
+
+.content-image{
+    display: flex;
+    flex-direction: "row";
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}

@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card class="ion-no-margin">		
+    <ion-card-content>
+      <form (ngSubmit)="updateUser()" [formGroup]="formCreateUser">
+			<ion-item class="ion-margin-bottom">
+				<ion-icon name="person-outline" class="ion-margin-end"></ion-icon>
+				<ion-input 
+          formControlName="name" 
+          type="text" 
+          placeholder="Pepito perez"
+          ></ion-input>
+			</ion-item>
+			<ion-item class="ion-margin-bottom">
+				<ion-icon name="person-outline" class="ion-margin-end"></ion-icon>
+				<ion-input formControlName="last_name" type="text" placeholder="supongamos"></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-icon name="mail-outline" class="ion-margin-end"></ion-icon>
+				<ion-input formControlName="email" type="email" placeholder="usuario@mail.com"></ion-input>
+			</ion-item>
+			<ion-item class="ion-margin-top">
+				<ion-icon name="lock-closed-outline" class="ion-margin-end"></ion-icon>
+				<ion-input formControlName="password" type="password" placeholder="*****"></ion-input>
+			</ion-item>
+			<div class="ion-margin-top">
+				<ion-button type="submit" expand="block" fill="solid">Editar usuario</ion-button>
+				<ion-button type="button" (click)="deleteUser()" expand="block" fill="solid">Eliminar usuario</ion-button>
+			</div>
+    </form>
+		</ion-card-content>
+	</ion-card>
+</ion-content>

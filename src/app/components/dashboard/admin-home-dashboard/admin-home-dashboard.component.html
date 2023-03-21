@@ -6,7 +6,17 @@
   </ion-header>
   <ion-content class="ion-padding">
 		<ion-list>
-			<ion-item *ngFor="let item of menuItems; index as i" lines="none" class="ion-margin-bottom">
+			<ion-item 
+				*ngFor="let item of menuItems; index as i" 
+				lines="none" 
+				class="ion-margin-bottom"
+				routerLink="{{item.to}}"
+			>
+				<ion-icon name="{{item.icon}}" class="ion-margin-end"></ion-icon>
+				<ion-label class="ion-no-border">{{item.label}}</ion-label>
+			</ion-item>
+			<ion-item></ion-item>
+			<ion-item *ngFor="let item of menuConfigItems" lines="none">
 				<ion-icon name="{{item.icon}}" class="ion-margin-end"></ion-icon>
 				<ion-label class="ion-no-border">{{item.label}}</ion-label>
 			</ion-item>

@@ -12,6 +12,7 @@ export class DashboardHomePage implements OnInit {
     name: "Joe Stwart",
     last_name: "valencia renteria",
     email: "stiwart@gmail.com",
+    password: "",
     rol: 1
   } 
   constructor() { }

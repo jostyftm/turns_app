@@ -1,3 +1,5 @@
+import { UserCreateDashboardComponent } from './components/users/user-create-dashboard/user-create-dashboard.component';
+import { UserEditDashboardComponent } from './components/users/user-edit-dashboard/user-edit-dashboard.component';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -22,7 +24,23 @@ const routes: Routes = [
   {
     path: 'dashboard-home',
     loadChildren: () => import('./pages/dashboard/dashboard-home/dashboard-home.module').then( m => m.DashboardHomePageModule)
-  }
+  },
+  {
+    path: 'dashboard/users',
+    loadChildren: () => import('./pages/dashboard/dashboard-user-list/dashboard-user-list.module').then( m => m.DashboardUserListPageModule)
+  },
+  {
+    path: 'dashboard/users/new',
+    component: UserCreateDashboardComponent
+  },
+  {
+    path: 'dashboard/users/:id/edit',
+    component: UserEditDashboardComponent
+  },
+  // {
+  //   path: 'dashboard-company-list',
+  //   loadChildren: () => import('./pages/dashboard/dashboard-company-list/dashboard-company-list.module').then( m => m.DashboardCompanyListPageModule)
+  // },
 ];
 
 @NgModule({
